@@ -1,0 +1,14 @@
+@startuml
+start
+:User accesses dashboard;
+:Dashboard retrieves federated model metrics;
+:Dashboard retrieves centralized model metrics;
+if (Both metrics available?) then (yes)
+  :Dashboard generates comparative visualizations;
+  :User interacts with dashboard;
+  :Dashboard provides clear interpretation aids;
+else (no)
+  :Display 'Data Not Available' or warning;
+endif
+stop
+@enduml
